@@ -1,0 +1,16 @@
+version: "3"
+services:
+  mumble:
+    image: mumblevoip/mumble-server:latest
+    container_name: mumble_server
+    ports:
+      - 64738:64738/tcp
+      - 64738:64738/udp
+    environment:
+      - MUMBLE_SERVERNAME=Mumble Server
+      - MUMBLE_MAXUSERS=50
+      - MUMBLE_PASSWORD=${MUMBLE_PASSWORD}
+      - MUMBLE_BANDWIDTH=72000
+    volumes:
+      - ./mumble-data:/data
+    restart: always
