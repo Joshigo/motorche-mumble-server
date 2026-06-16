@@ -11,6 +11,7 @@ services:
       - MUMBLE_MAXUSERS=50
       - MUMBLE_PASSWORD=${MUMBLE_PASSWORD}
       - MUMBLE_BANDWIDTH=72000
+      - MUMBLE_SUPERUSER_PASSWORD=${MUMBLE_SUPERUSER_PASSWORD}
     volumes:
       - ./mumble-data:/data
     restart: always
