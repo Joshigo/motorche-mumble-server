@@ -10,9 +10,9 @@ services:
       - MUMBLE_SERVERNAME=Mumble Server
       - MUMBLE_MAXUSERS=50
       - MUMBLE_BANDWIDTH=72000
-      - MUMBLE_CONFIG_SERVERPASSWORD=${MUMBLE_PASSWORD}
+      - MUMBLE_CONFIG_SERVER_PASSWORD=${MUMBLE_PASSWORD}
       - MUMBLE_SUPERUSER_PASSWORD=${MUMBLE_SUPERUSER_PASSWORD}
-      - MUMBLE_CONFIG_WELCOMETEXT=Welcome to Motorche Mumble Server
+      - MUMBLE_CONFIG_WELCOMETEXT='Welcome to Motorche Mumble Server'
     volumes:
       - ./mumble-data:/data
     restart: always
